@@ -1,0 +1,27 @@
+import Nayla014
+
+while True: 
+    print("\n=== MENU MATRIKS 3x3 ===")
+    print("1. Transpose Matriks")
+    print("2. Perkalian Matriks")
+    print("3. Keluar")
+
+    p = input("Pilih menu: ")
+
+    if p == "1":
+        M = Nayla014.input_matriks()
+        print("\nTranspose:")
+        Nayla014.tampilkan_matriks(Nayla014.transpose_matriks(M))
+
+    elif p == "2":
+        A = Nayla014.input_matriks()
+        B = Nayla014.input_matriks()
+        print("\nHasil Perkalian:")
+        Nayla014.tampilkan_matriks(Nayla014.perkalian_matriks(A, B))
+
+    elif p == "3":
+        print("Program selesai.")
+        break
+
+    else:
+        print("Pilihan tidak valid!")
