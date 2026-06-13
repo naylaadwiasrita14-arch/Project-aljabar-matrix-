@@ -1,0 +1,24 @@
+def input_matriks(): 
+    print("Masukkan elemen matriks 3x3")
+    M = []
+   
+    for i in range(3): 
+        baris = []
+        for j in range(3):
+            baris.append(int(input(f"Elemen [{i+1}][{j+1}] = ")))
+        M.append(baris)
+    return M
+
+def tampilkan_matriks(M):
+    for baris in M: print(baris) 
+
+def transpose_matriks(M):
+    return [[M[i][j] for i in range(3)] for j in range(3)]
+
+def perkalian_matriks(A, B):
+    H = [[0]*3 for _ in range(3)]
+    for i in range(3):
+        for j in range(3):
+            for k in range(3):
+                H[i][j] += A[i][k] * B[k][j]
+    return H
